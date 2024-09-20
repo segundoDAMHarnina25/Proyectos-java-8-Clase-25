@@ -72,14 +72,19 @@ public class Ejemplo05Inicialbien extends JFrame {
 	private void addMyButton(String position, Coordenada coordenada, DimensionEntera dimension) {
 		JButton btnNewButton = new JButton(position);
 		btnNewButton.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				hazAlgo(Integer.valueOf(position));
-				
+
 			}
 		});
-				
+
+		btnNewButton.addActionListener((e) -> 
+			{
+				hazAlgo(Integer.valueOf(position));
+			});
+
 		btnNewButton.setBounds(coordenada.getX(), coordenada.getY(), dimension.getWidth(), dimension.getHeight());
 		contentPane.add(btnNewButton);
 	}
