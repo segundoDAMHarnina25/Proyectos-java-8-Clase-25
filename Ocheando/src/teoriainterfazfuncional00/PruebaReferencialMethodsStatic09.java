@@ -9,8 +9,17 @@ public class PruebaReferencialMethodsStatic09 {
 				Float::valueOf;
 		Float otro=converter.convert("16.9");
 		System.out.println(otro);
+		Converter<Float,String> converterRef=ParaConverter::convertir;
 	}
 
+}
+class ParaConverterBack{
+	public static String convertir(Float valor) {
+		if(valor==5f) {
+			return "cinco";
+		}
+		return "nada";
+	}
 }
 class ParaConverter{
 	public static Float convertir(String valor) {
