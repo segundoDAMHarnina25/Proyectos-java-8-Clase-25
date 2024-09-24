@@ -2,6 +2,7 @@ package optional02;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 
 public class Ejercicio01 {
@@ -11,8 +12,9 @@ public class Ejercicio01 {
 				.getPrimerRepetido(Arrays.asList(3, 4, 5, 6, 7)));
 	}
 
-	public Integer getPrimerRepetido(List<Integer> collect3) {
-		int primerRepetido = -1;
+	public Optional<Integer> getPrimerRepetido(List<Integer> collect3) {
+		Optional<Integer> retorno=Optional.empty();
+		int primerRepetido =0;
 		boolean encontrado = false;
 		for (int i = 0; i < collect3.size() - 1 && !encontrado; i++) {
 			int contador = 0;
@@ -24,8 +26,9 @@ public class Ejercicio01 {
 			if (contador >= 1) {
 				primerRepetido = collect3.get(i);
 				encontrado = true;
+				retorno=Optional.of(primerRepetido);
 			}
 		}
-		return primerRepetido;
+		return retorno;
 	}
 }
