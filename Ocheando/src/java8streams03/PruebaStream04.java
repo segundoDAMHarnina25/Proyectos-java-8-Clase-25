@@ -28,7 +28,7 @@ public class PruebaStream04 {
 			.filter((elementoInicial)->
 					{return collect3.stream()
 						.filter((otroElemento)->
-							{return otroElemento==elementoInicial;})
+							otroElemento==elementoInicial)
 						.count()>1;})
 			.findFirst().orElse(-1);
 		Integer orElse2 = collect3.stream()

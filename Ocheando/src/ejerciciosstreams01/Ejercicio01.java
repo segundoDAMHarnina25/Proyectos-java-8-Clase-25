@@ -1,4 +1,4 @@
-package java8streams03;
+package ejerciciosstreams01;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,14 +14,13 @@ public class Ejercicio01 {
 //	en un conjunto de listas e imprímalos en la consola.
 	public static void main(String[] args) {
 		ArrayList al = new ArrayList();
-		Integer[] arr = new Integer[10]; // Indica la longitud
-		int otro[] = new int[10];
-		// fallo del asList
-		List<int[]> asList = Arrays.asList(otro);
+		Integer[] arr= new Integer[10]; // Indica la longitud
+		
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = (int) (Math.random() * 100 + 1);
 		}
 		//20 numero aleatorios de 1 a 100
+		//Forma alternativa con p. declarativa
 		List<Integer> collect = new Random()
 				.ints(1, 100)
 				.limit(20)
@@ -32,14 +31,20 @@ public class Ejercicio01 {
 			if (arr[i] >= 10)
 				al.add(arr[i]);
 		}
+		
 		Iterator it = al.iterator();
 		while (it.hasNext()) {
-			System.out.println(it.next());
+			System.out.print(it.next()+" ");
 		}
-
+		System.out.println();
+		List<Integer> listaguay = filtradorGuay(arr);
+		System.out.println(listaguay);
 	}
 
-	public static List<Integer> filtradorGuay() {
-		return null;
+	public static List<Integer> filtradorGuay(Integer[] asList) {
+		return Arrays.asList(asList).stream()
+			.filter(valor->
+					valor>10)
+			.collect(Collectors.toList());
 	}
 }
