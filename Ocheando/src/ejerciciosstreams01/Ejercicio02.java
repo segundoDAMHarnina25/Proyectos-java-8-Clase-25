@@ -30,7 +30,7 @@ public class Ejercicio02 {
 		}
 	}
 
-	public static List<String> getQQGuay() {
+	public static List<String> omitirRepetidosStream() {
 		return null;
 	}
 
