@@ -25,7 +25,10 @@ public class Ejercicio04 {
              map.put (3, " ");
              map.put (4, "Exterminador también");
              map.put (5, " ");
-             map.put (2, "   "); // Debido a que la clave del mapa es única, poner la misma clave es equivalente a sobrescribir
+             //sobreescribo a zhou
+             map.put (2, "   "); 
+             // Debido a que la clave del mapa es única,
+             //poner la misma clave es equivalente a sobrescribir
       map.remove(1);
       //map.
       Set<Integer> keyset = map.keySet();
@@ -35,5 +38,9 @@ public class Ejercicio04 {
       	Integer integer = (Integer)it.next();
       	System.out.println("key:"+integer+" value:"+map.get(integer));
       }
+      //con streams
+      map.forEach((indice,valor)->{});
+      map.entrySet().forEach(elemento->
+    		  System.out.println("keystream "+elemento.getKey()+" value "+elemento.getValue()));
 	}
 }

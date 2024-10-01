@@ -17,6 +17,7 @@ public class Ejercicio02 {
 	 */
 	public static void main(String[] args) {
 		LinkedList<String> al = getListQQ();
+		List<String> omitirRepetidosStream = omitirRepetidosStream(al);
 		for (int j = 0; j < al.size(); j++) {
 			for (int k = j + 1; k < al.size(); k++) {
 				if (al.get(j).equals(al.get(k))) {
@@ -24,14 +25,16 @@ public class Ejercicio02 {
 				}
 			}
 		}
+		
 		Iterator it = al.iterator();
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}
+		System.out.println(al.equals(omitirRepetidosStream));
 	}
 
-	public static List<String> omitirRepetidosStream() {
-		return null;
+	public static List<String> omitirRepetidosStream(List<String> lista) {
+		return lista.stream().distinct().collect(Collectors.toList());
 	}
 
 	private static LinkedList<String> getListQQ() {

@@ -13,8 +13,8 @@ public class Apuesta {
 	}
 
 	public boolean comprobarSorteo(BolaDobleColor sorteo2) {
-		//TODO
-		return false;
+		return bolasRoja.contains(sorteo2.getRoja())&&
+		bolaAzul==sorteo2.getAzul();
 	}
 
 }

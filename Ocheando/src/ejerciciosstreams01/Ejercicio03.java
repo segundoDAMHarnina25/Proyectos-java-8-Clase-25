@@ -35,6 +35,16 @@ class Sorteo {
 	private BolaDobleColor bolaDobleColor;
 	private Rango bolaRoja = new Rango(1, 33), bolaAzul = new Rango(1, 16);
 
+	
+	public Sorteo() {
+		super();
+	}
+
+	public Sorteo(BolaDobleColor bolaDobleColor) {
+		super();
+		this.bolaDobleColor = bolaDobleColor;
+	}
+
 	public BolaDobleColor getSorteo() {
 		
 		return new BolaDobleColor(
@@ -46,6 +56,16 @@ class Sorteo {
 	public int getAleatorio(int max, int min) {
 		return new Random().nextInt((max - min)+1)+ min;
 	}
+
+	public BolaDobleColor getBolaDobleColor() {
+		return bolaDobleColor;
+	}
+
+	public void setBolaDobleColor(BolaDobleColor bolaDobleColor) {
+		this.bolaDobleColor = bolaDobleColor;
+	}
+
+	
 }
 
 class BolaDobleColor {
@@ -61,6 +81,15 @@ class BolaDobleColor {
 	public boolean comprobar(Integer bolaRoja, int bolaAzul) {
 		return bolaRoja == roja && bolaAzul == azul;
 	}
+
+	public int getRoja() {
+		return roja;
+	}
+
+	public int getAzul() {
+		return azul;
+	}
+	
 }
 
 class Rango {
