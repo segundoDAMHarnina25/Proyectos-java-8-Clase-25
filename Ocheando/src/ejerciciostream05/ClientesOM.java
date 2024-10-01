@@ -10,7 +10,7 @@ public class ClientesOM {
 	static List<String> nombres=List.of("Juan","pedro","antonio","rafa","julio","andres");
 	static List<Float> descuentos=List.of(0f,10f,0f,0f,0f,10f);
 	
-	public static List<Cliente> getClientes() {
+	public  List<Cliente> getClientes() {
 		//con streams
 		return nombres.stream()
 			.map((nombre)
