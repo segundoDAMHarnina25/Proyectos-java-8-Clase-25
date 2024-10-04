@@ -14,6 +14,7 @@ public class AlumnoResponse {
 		materiasSuspensas=new LinkedList<>();
 	}
 
+	
 	void addMateriaSuspensa(Materias materia) {
 		materiasSuspensas.add(materia.toString());
 	}
