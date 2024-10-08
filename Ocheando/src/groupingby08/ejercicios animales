@@ -1,0 +1,38 @@
+1. Agrupar animales por especie
+
+	Agrupa los animales por su especie y muestra cuántos animales hay de cada especie.
+	
+2. Agrupar animales por si son carnívoros o herbívoros
+
+Agrupa los animales en función de su dieta (carnívoros o herbívoros)./
+	 */
+	 /*
+	 * 3. Agrupar animales por décadas de nacimiento
+
+Agrupa los animales según la década en que nacieron.
+	
+	 4. Agrupar animales por si pesan más o menos de 500 kg
+
+Agrupa los animales en dos grupos: los que pesan más de 500 kg y los que pesan menos o igual a 500 kg.
+
+ * 5. Agrupar animales por año de nacimiento
+
+Agrupa los animales según el año en que nacieron.
+		 */
+		 6. Agrupar por dieta y contar el número de animales en cada grupo
+
+Agrupa los animales por si son carnívoros o herbívoros, y cuenta cuántos hay en cada grupo.
+ */
+ /*
+		 * 7. Agrupar animales por especie y sumar sus pesos
+
+Agrupa los animales por especie y suma el peso total de cada grupo.
+		 */
+		 /*
+		 * 8. Agrupar por dieta y calcular el peso promedio de los animales
+
+Agrupa los animales por si son carnívoros o herbívoros, y calcula el peso promedio de cada grupo.			
+		 */
+		 * 9. Agrupar animales por especies y obtener el animal más pesado de cada grupo
+		 10. Agrupar animales por si nacieron antes o después del año 2015		
+		 
