@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
-class TesingGrouping {
+class TestingGrouping {
 	List<Persona> personas = PersonaMother.createPersonas();
 	
 	@Test
